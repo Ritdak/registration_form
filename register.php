@@ -1,8 +1,8 @@
-<?php include('server.php'); ?>
+<?php include('register_action.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>My Application</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -12,8 +12,13 @@
 </div>
 
 <form method="post" action="register.php">
-<!-- display validation erors here-->
-<?php include('errors.php'); ?>
+	<!-- display validation errors here-->
+	<?php include('errors.php'); ?>
+
+	<!-- display success message here -->
+	<?php if ($success_message !== ""): ?>
+		<p> <?php echo $success_message; ?> </p>
+	<?php endif ?>
 
 	<div class="input-group">
 		<label>Username</label>
